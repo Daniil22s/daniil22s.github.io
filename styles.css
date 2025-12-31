@@ -1,0 +1,201 @@
+:root{
+  --text:#222;
+  --muted:#666;
+  --link:#1a73e8;
+  --border:#e6e6e6;
+  --bg:#fff;
+  --max:1000px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); }
+body{ font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+
+a{ color:var(--link); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+.page{
+  max-width: calc(var(--max) + 260px);
+  margin: 0 auto;
+  padding: 24px 18px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 28px;
+}
+
+/* Left profile */
+.sidebar{
+  position: sticky;
+  top: 18px;
+  align-self: start;
+}
+
+.avatar{
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  display:block;
+}
+
+.name{
+  margin: 14px 0 6px;
+  font-size: 22px;
+  font-weight: 650;
+}
+
+.meta{
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.meta li{
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+}
+.meta .icon{
+  width: 16px;
+  text-align:center;
+  opacity: .75;
+}
+
+/* Top nav */
+.topnav{
+  display:flex;
+  gap: 22px;
+  align-items:center;
+  border-bottom: 1px solid var(--border);
+  padding: 6px 0 14px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.topnav a{
+  color: var(--text);
+  font-weight: 520;
+  padding: 6px 2px;
+}
+.topnav a.active{
+  border-bottom: 2px solid var(--text);
+}
+
+/* Content */
+.content{
+  min-width: 0;
+}
+h2{
+  margin: 26px 0 10px;
+  font-size: 24px;
+}
+.section{
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  margin-top: 14px;
+}
+ul.clean{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  line-height: 1.7;
+}
+.small{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 860px){
+  .page{
+    grid-template-columns: 1fr;
+  }
+  .sidebar{
+    position: relative;
+    top: auto;
+  }
+}
+
+/* Publications list */
+.pubs{
+  margin-top: 25px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-left: 22px;
+  padding-bottom: 0;
+}
+
+.pubs li{
+  margin-bottom: 18px;
+  line-height: 0.5;
+  padding-top: 0;
+}
+
+.pubs .title{
+  font-weight: 550;
+}
+
+.pubs .authors{
+  margin-left: 0;
+}
+
+.pubs .authors a{
+  color: var(--link);
+}
+
+.pubs .venue{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+/* Teaching page blocks*/
+.tblock{
+  margin-top: 18px;
+}
+
+.tblock h2{
+  margin: 0;
+  font-size: 24px;
+}
+
+.tblock h2::after{
+  content:"";
+  display:block;
+  border-top: 1px solid var(--border);
+  margin-top: 10px;
+}
+
+.tlist{
+  margin: 14px 0 0;
+  padding-left: 18px;
+  line-height: 1.75;
+}
+
+.role{
+  color: var(--muted);
+}
+
+/* Talks extras */
+.tba{
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.date{
+  color: var(--muted);
+}
+
+
+/* add ons */
+.space-div {
+    margin: 15px;
+}
+
+.sep{
+  border: none;
+  border-top: 1px solid #e6e6e6;
+  margin: 18px 0;
+}
